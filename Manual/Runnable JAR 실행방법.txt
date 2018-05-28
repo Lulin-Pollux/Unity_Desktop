@@ -1,0 +1,6 @@
+﻿Runnable JAR 실행방법.txt (ver.1.0.0)
+
+1. 파일이 위치한 디렉토리에서 Shift + 마우스 우클릭하여 cmd나 PowerShell을 실행한다.
+2. 아래 명령어를 입력한다.
+	java -jar [파일 이름].jar
+	예: java -jar Unity_Desktop.jar
