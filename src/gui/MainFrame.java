@@ -32,6 +32,7 @@ import javax.swing.border.EmptyBorder;
 
 import app.Calculator;
 import app.ExternalAppExecute;
+import terminal.CommonFn;
 import terminal.Shell;
 import thread.MusicPlayerThread;
 import thread.ShellThread;
@@ -392,6 +393,8 @@ public class MainFrame extends JFrame {
 				System.out.println("Still alive!!");
 				System.out.println("아쉽지만 Still alive 재생기는 없습니다.");
 				System.out.println();
+				CommonFn.pause();
+				System.out.println("종료!");
 				return;
 			
 			case "-shell": case "-terminal":

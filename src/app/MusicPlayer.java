@@ -54,9 +54,8 @@ public class MusicPlayer {
 				break;
 				
 			case 0:
+				System.out.println("앱을 종료했습니다.");
 				System.out.println();
-				System.out.println("종료합니다...");
-				CommonFn.pause();
 				return;		//앱 종료
 				
 			default:

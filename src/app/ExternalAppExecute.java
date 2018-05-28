@@ -147,23 +147,24 @@ public class ExternalAppExecute extends JInternalFrame {
 			case "실행":
 				String path;
 				
-				//만약 CUI를 체크했으면 아래 문장을 추가하고 아니라면 추가안함.
-				if (rdbtnCui.isSelected() == true)
-					path = "cmd.exe /c start cmd /c call \"" + txtPath.getText() + "\"";
-				else if (rdbtnGui.isSelected() == true)
-					path = txtPath.getText();
-				else {
-					String message = "앱 실행 모드를 선택해주세요!";	//만약 라디오 버튼 둘다 선택 안했으면 실행 중단
+				//만약 라디오 버튼 둘다 선택 안했으면 실행 중단
+				if ((rdbtnCui.isSelected() == false) && (rdbtnGui.isSelected() == false)) {
+					String message = "앱 실행 모드를 선택해주세요!";
 					JOptionPane.showMessageDialog(null, message, "경고", JOptionPane.WARNING_MESSAGE);
 					break;
 				}
-				
 				//만약 앱 경로가 비어있으면 실행 중단
-				if (txtPath.getText().equals("")) {
+				else if (txtPath.getText().equals("")) {
 					String message = "실행할 앱을 지정해 주세요!";
 					JOptionPane.showMessageDialog(null, message, "경고", JOptionPane.WARNING_MESSAGE);
 					break;
 				}
+				
+				//만약 CUI를 체크했으면 아래 문장을 추가하고 아니라면 추가안함.
+				if (rdbtnCui.isSelected() == true)
+					path = "cmd.exe /c start cmd /k call \"" + txtPath.getText() + "\"";
+				else
+					path = "\"" + txtPath.getText() + "\"";
 				
 				//만약 매개변수가 있다면 path 뒤에 매개변수를 추가함.
 				if (txtParameter.getText().equals("") == false)
@@ -178,6 +179,7 @@ public class ExternalAppExecute extends JInternalFrame {
 				} catch (IOException e) {
 					String message = "파일 선택에 문제가 발생했습니다. \n";
 					JOptionPane.showMessageDialog(null, message + e, "오류", JOptionPane.ERROR_MESSAGE);
+					break;
 				}
 				dispose();
 				break;

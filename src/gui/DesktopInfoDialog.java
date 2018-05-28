@@ -44,11 +44,11 @@ class DesktopInfoDialog extends JDialog {
 		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
         
-        JLabel label1 = new JLabel("Unity Desktop 1.0.0");
-        label1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+        JLabel label1 = new JLabel("Unity Desktop 1.1.0");
+        label1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 14));
         
         JLabel label2 = new JLabel("Made by Lulin Pollux");
-        label2.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+        label2.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 14));
         
         contentPanel.add(label1);
         contentPanel.add(label2);
