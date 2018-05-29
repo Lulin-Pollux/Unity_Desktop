@@ -20,9 +20,9 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
-@SuppressWarnings("serial")
 class Resolution_Change extends JDialog {
-
+	private static final long serialVersionUID = 3898963747207781514L;
+	
 	/* 멤버 변수 목록 */
 	//-----------------------------------------------------
 	private JTextField txtWidth;

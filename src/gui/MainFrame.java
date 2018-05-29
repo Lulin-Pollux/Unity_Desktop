@@ -32,6 +32,8 @@ import javax.swing.border.EmptyBorder;
 
 import app.Calculator;
 import app.ExternalAppExecute;
+import app.NewUser;
+import app.Sort;
 import terminal.CommonFn;
 import terminal.Shell;
 import thread.MusicPlayerThread;
@@ -39,15 +41,16 @@ import thread.ShellThread;
 import thread.TimerThread;
 
 
-@SuppressWarnings("serial")
 public class MainFrame extends JFrame {
-
+	private static final long serialVersionUID = -7408089589475836112L;
+	
 	/* 멤버 변수 목록 */
 	//------------------------------------------------------
 	public static MainFrame frame;
 	private JPanel contentPane;
 	static ImportWallpaper desktop_panel;
 	private JDesktopPane desktopPane;
+	private JPanel 작업_표시줄;
 	private JPanel appList_panel;
 	public static JLabel lblDate;
 	
@@ -97,10 +100,6 @@ public class MainFrame extends JFrame {
 	
 	//작업 표시줄 생성
 	private void createTaskBar() {
-		JPanel 작업_표시줄 = new JPanel();
-		작업_표시줄.setBackground(new Color(10, 18, 26));
-		작업_표시줄.setBorder(new EmptyBorder(1, 2, 2, 2));
-		contentPane.add(작업_표시줄, BorderLayout.SOUTH);
 		
 		JButton btnSystem_info = new JButton("시스템 정보");
 		btnSystem_info.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
@@ -129,11 +128,11 @@ public class MainFrame extends JFrame {
 		작업_표시줄.add(horizontalStrut_1);
 	}
 	
-	//앱 리스트 생성
+	//앱 목록 생성
 	private void createAppList() {
-		Component verticalStrut_1 = Box.createVerticalStrut(7);
-		appList_panel.add(verticalStrut_1);
 		
+		/* 계산기 */
+		//---------------------------------------------------------------------------------------------
 		JLabel lblCalculator = new JLabel("계산기");
 		lblCalculator.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -156,16 +155,21 @@ public class MainFrame extends JFrame {
 		Image changedimg = img1.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		lblCalculator.setIcon(new ImageIcon(changedimg));
 		appList_panel.add(lblCalculator);
+		//---------------------------------------------------------------------------------------------
 		
 		Component verticalStrut_2 = Box.createVerticalStrut(15);
 		appList_panel.add(verticalStrut_2);
 		
-		JLabel lblNewUser = new JLabel("계정 만들기");
+		/* 회원가입 프로그램 */
+		//---------------------------------------------------------------------------------------------
+		JLabel lblNewUser = new JLabel("<html>회원가입 <br>프로그램</html>");
 		lblNewUser.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0) {
 				//더블클릭 처리
 				if (arg0.getClickCount() == 2) {
-					//앱 실행 코드 위치해야 함
+					NewUser newUser = new NewUser();
+					desktopPane.add(newUser);
+					newUser.show();
 				}
 			}
 		});
@@ -180,18 +184,21 @@ public class MainFrame extends JFrame {
 		Image changedimg2 = img2.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		lblNewUser.setIcon(new ImageIcon(changedimg2));
 		appList_panel.add(lblNewUser);
+		//---------------------------------------------------------------------------------------------
 		
 		Component verticalStrut_3 = Box.createVerticalStrut(15);
 		appList_panel.add(verticalStrut_3);
 		
+		/* 외부 앱 실행기 */
+		//---------------------------------------------------------------------------------------------
 		JLabel lblExternalApp = new JLabel("<html> 외부 앱<br> 실행기 </html>");
 		lblExternalApp.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0) {
 				//더블클릭 처리
 				if (arg0.getClickCount() == 2) {
-					ExternalAppExecute exec = new ExternalAppExecute();
-					desktopPane.add(exec);
-					exec.show();
+					ExternalAppExecute externAppExec = new ExternalAppExecute();
+					desktopPane.add(externAppExec);
+					externAppExec.show();
 				}
 			}
 		});
@@ -206,10 +213,13 @@ public class MainFrame extends JFrame {
 		Image changedimg3 = img3.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		lblExternalApp.setIcon(new ImageIcon(changedimg3));
 		appList_panel.add(lblExternalApp);
+		//---------------------------------------------------------------------------------------------
 		
 		Component verticalStrut_4 = Box.createVerticalStrut(15);
 		appList_panel.add(verticalStrut_4);
 		
+		/* 음악 플레이어 */
+		//---------------------------------------------------------------------------------------------
 		JLabel lblMusicPlayer = new JLabel("<html> &nbsp&nbsp음악<br>플레이어</html>");
 		lblMusicPlayer.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -252,16 +262,21 @@ public class MainFrame extends JFrame {
 		Image changedimg4 = img4.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		lblMusicPlayer.setIcon(new ImageIcon(changedimg4));
 		appList_panel.add(lblMusicPlayer);
+		//---------------------------------------------------------------------------------------------
 		
 		Component verticalStrut_5 = Box.createVerticalStrut(15);
 		appList_panel.add(verticalStrut_5);
 		
+		/* 정렬 프로그램 */
+		//---------------------------------------------------------------------------------------------
 		JLabel lblSort = new JLabel("<html>정렬<br> 프로그램</html>");
 		lblSort.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0) {
 				//더블클릭 처리
 				if (arg0.getClickCount() == 2) {
-					//앱 실행 코드 위치해야 함
+					Sort sort = new Sort();
+					desktopPane.add(sort);
+					sort.show();
 				}
 			}
 		});
@@ -276,10 +291,13 @@ public class MainFrame extends JFrame {
 		Image changedimg5 = img5.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		lblSort.setIcon(new ImageIcon(changedimg5));
 		appList_panel.add(lblSort);
+		//---------------------------------------------------------------------------------------------
 		
 		Component verticalStrut_6 = Box.createVerticalStrut(15);
 		appList_panel.add(verticalStrut_6);
 		
+		/* Shell */
+		//---------------------------------------------------------------------------------------------
 		JLabel lblShell = new JLabel("Shell");
 		lblShell.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -323,6 +341,7 @@ public class MainFrame extends JFrame {
 		Image changedimg6 = img6.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		lblShell.setIcon(new ImageIcon(changedimg6));
 		appList_panel.add(lblShell);
+		//---------------------------------------------------------------------------------------------
 	}
 	//----------------------------------------------------------
 	
@@ -366,12 +385,19 @@ public class MainFrame extends JFrame {
 		
 		
 		/* South 지역 패널 생성 */
+		//----------------------------------------------------------------
+		작업_표시줄 = new JPanel();
+		작업_표시줄.setBackground(new Color(10, 18, 26));
+		작업_표시줄.setBorder(new EmptyBorder(1, 2, 2, 2));
+		contentPane.add(작업_표시줄, BorderLayout.SOUTH);
 		createTaskBar();
+		//----------------------------------------------------------------
 		
 		
 		/* West 지역 패널 생성 */
 		//----------------------------------------------------------------
 		appList_panel = new JPanel();
+		appList_panel.setBorder(new EmptyBorder(6, 4, 6, 4));
 		appList_panel.setBackground(new Color(40, 40, 40));
 		contentPane.add(appList_panel, BorderLayout.WEST);
 		appList_panel.setLayout(new BoxLayout(appList_panel, BoxLayout.Y_AXIS));

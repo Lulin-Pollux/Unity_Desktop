@@ -10,8 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-@SuppressWarnings("serial")
 class DesktopInfoDialog extends JDialog {
+	private static final long serialVersionUID = -4939499895107162638L;
 	
 	private JPanel contentPanel = new JPanel();
 
@@ -44,7 +44,7 @@ class DesktopInfoDialog extends JDialog {
 		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
         
-        JLabel label1 = new JLabel("Unity Desktop 1.1.0");
+        JLabel label1 = new JLabel("Unity Desktop v1.2.0");
         label1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 14));
         
         JLabel label2 = new JLabel("Made by Lulin Pollux");

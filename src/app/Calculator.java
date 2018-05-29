@@ -16,8 +16,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
-@SuppressWarnings("serial")
 public class Calculator extends JInternalFrame {
+	private static final long serialVersionUID = -4757435002385107956L;
 	
 	/* ¸â¹ö ÄÄÆ÷³ÍÆ® */
 	//-----------------------------------

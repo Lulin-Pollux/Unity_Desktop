@@ -21,9 +21,9 @@ import javax.swing.JSeparator;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 
-@SuppressWarnings("serial")
 class SystemInfoDialog extends JDialog {
-
+	private static final long serialVersionUID = 7928252656870559242L;
+	
 	private JPanel contentPanel = new JPanel();
 	private static String value[][] = new String[58][2];
 	

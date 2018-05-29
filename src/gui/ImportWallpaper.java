@@ -8,8 +8,8 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
 class ImportWallpaper extends JPanel {
+	private static final long serialVersionUID = -906959846881325067L;
 	
 	static String wallpaper_path = System.getProperty("user.dir") + "/wallpaper.jpg";	//배경사진 경로 저장
 	
