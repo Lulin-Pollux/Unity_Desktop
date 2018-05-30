@@ -11,7 +11,6 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -135,7 +134,7 @@ public class Sort extends JInternalFrame {
 		//------------------------------------------------------------
 		
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // 창 종료시 프로그램까지 같이 종료
+		setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);  // 창 종료시 프로그램까지 같이 종료
 		setVisible(true); // 창 표시여부
 	}
 	

@@ -106,7 +106,6 @@ public class Calculator extends JInternalFrame {
 	/* 프레임 생성 */
 	//--------------------------------------------------------------
 	public Calculator() {
-		setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		/* 프레임 세팅 */
 		//----------------------------------------------------------------
 		setTitle("계산기");
@@ -115,6 +114,7 @@ public class Calculator extends JInternalFrame {
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
+		setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		//----------------------------------------------------------------
 		
 		/* 컨텐트팬 생성 */

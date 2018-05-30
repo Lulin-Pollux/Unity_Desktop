@@ -298,7 +298,8 @@ class MyPanel extends Panel  {
 
 
 	public static void main(String args[]) {
-		new NewUser(); //按眉 积己矫 积己磊 龋免
+		NewUser newUser = new NewUser(); //按眉 积己矫 积己磊 龋免
+		newUser.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
 	}
 
 }
