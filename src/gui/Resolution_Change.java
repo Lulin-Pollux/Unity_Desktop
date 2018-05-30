@@ -232,3 +232,7 @@ class Resolution_Change extends JDialog {
 	}
 	//---------------------------------------------------------------------
 }
+
+/*  개발자: Lulin Pollux */
+/*  MIT License
+	해당 소스코드 (.java)는 MIT License에 따라 이용할 수 있습니다. */

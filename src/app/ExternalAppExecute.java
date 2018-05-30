@@ -24,9 +24,9 @@ import javax.swing.border.TitledBorder;
 
 import gui.MainFrame;
 
-@SuppressWarnings("serial")
 public class ExternalAppExecute extends JInternalFrame {
-
+	private static final long serialVersionUID = 7425187512607635340L;
+	
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtPath;
 	private JTextField txtParameter;
@@ -37,7 +37,7 @@ public class ExternalAppExecute extends JInternalFrame {
 	public ExternalAppExecute() {
 		/* Dialog 세팅 */
 		//-----------------------------------------------------------
-		setTitle("외부 앱 실행");
+		setTitle("외부 앱 실행기");
 		setSize(415,321);
         setResizable(false);
         setMaximizable(true);
@@ -192,3 +192,7 @@ public class ExternalAppExecute extends JInternalFrame {
 	}
 	//---------------------------------------------------------------------
 }
+
+/*  개발자: Lulin Pollux */
+/*  MIT License
+	해당 소스코드 (.java)는 MIT License에 따라 이용할 수 있습니다. */

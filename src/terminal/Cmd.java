@@ -36,9 +36,14 @@ public class Cmd {
 			return readBuffer.toString();
 		}catch (Exception e) {
 			e.printStackTrace();
-			System.exit(1);
+			System.exit(0);
 		}
 		
 		return null;
 	}
 }
+
+/*  개발자: Lulin Pollux */
+/*  MIT License
+	해당 소스코드 (.java)는 MIT License에 따라 이용할 수 있습니다.
+	알고리즘 출처: http://hojak99.tistory.com/338 */

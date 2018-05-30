@@ -44,7 +44,7 @@ class DesktopInfoDialog extends JDialog {
 		contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
         
-        JLabel label1 = new JLabel("Unity Desktop v1.2.0");
+        JLabel label1 = new JLabel("Unity Desktop v1.3.0");
         label1.setFont(new Font("맑은 고딕", Font.BOLD, 14));
         
         JLabel label2 = new JLabel("Made by Lulin Pollux");
@@ -58,3 +58,7 @@ class DesktopInfoDialog extends JDialog {
 	}
 
 }
+
+/*  개발자: Lulin Pollux */
+/*  MIT License
+	해당 소스코드 (.java)는 MIT License에 따라 이용할 수 있습니다. */

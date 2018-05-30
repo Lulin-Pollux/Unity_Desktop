@@ -6,10 +6,10 @@ package terminal;
 
 public class TextColor {
 	
-	// Reset
+	// 리셋
     public static final String RESET = "\033[0m";  // Text Reset
 
-    // Regular Colors
+    // 일반 색
     public static final String BLACK = "\033[0;30m";   // BLACK
     public static final String RED = "\033[0;31m";     // RED
     public static final String GREEN = "\033[0;32m";   // GREEN
@@ -19,7 +19,7 @@ public class TextColor {
     public static final String CYAN = "\033[0;36m";    // CYAN
     public static final String WHITE = "\033[0;37m";   // WHITE
 
-    // Bold
+    // 굵게 (Bold)
     public static final String BLACK_BOLD = "\033[1;30m";  // BLACK
     public static final String RED_BOLD = "\033[1;31m";    // RED
     public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
@@ -29,7 +29,7 @@ public class TextColor {
     public static final String CYAN_BOLD = "\033[1;36m";   // CYAN
     public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
 
-    // Underline
+    // 밑줄
     public static final String BLACK_UNDERLINED = "\033[4;30m";  // BLACK
     public static final String RED_UNDERLINED = "\033[4;31m";    // RED
     public static final String GREEN_UNDERLINED = "\033[4;32m";  // GREEN
@@ -39,7 +39,7 @@ public class TextColor {
     public static final String CYAN_UNDERLINED = "\033[4;36m";   // CYAN
     public static final String WHITE_UNDERLINED = "\033[4;37m";  // WHITE
 
-    // Background
+    // 배경 색
     public static final String BLACK_BACKGROUND = "\033[40m";  // BLACK
     public static final String RED_BACKGROUND = "\033[41m";    // RED
     public static final String GREEN_BACKGROUND = "\033[42m";  // GREEN
@@ -49,7 +49,7 @@ public class TextColor {
     public static final String CYAN_BACKGROUND = "\033[46m";   // CYAN
     public static final String WHITE_BACKGROUND = "\033[47m";  // WHITE
 
-    // High Intensity
+    // 밝은 색
     public static final String BLACK_BRIGHT = "\033[0;90m";  // BLACK
     public static final String RED_BRIGHT = "\033[0;91m";    // RED
     public static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
@@ -59,7 +59,7 @@ public class TextColor {
     public static final String CYAN_BRIGHT = "\033[0;96m";   // CYAN
     public static final String WHITE_BRIGHT = "\033[0;97m";  // WHITE
 
-    // Bold High Intensity
+    // 굵고 밝은 색
     public static final String BLACK_BOLD_BRIGHT = "\033[1;90m"; // BLACK
     public static final String RED_BOLD_BRIGHT = "\033[1;91m";   // RED
     public static final String GREEN_BOLD_BRIGHT = "\033[1;92m"; // GREEN
@@ -69,7 +69,7 @@ public class TextColor {
     public static final String CYAN_BOLD_BRIGHT = "\033[1;96m";  // CYAN
     public static final String WHITE_BOLD_BRIGHT = "\033[1;97m"; // WHITE
 
-    // High Intensity backgrounds
+    // 밝은 배경 색
     public static final String BLACK_BACKGROUND_BRIGHT = "\033[0;100m";// BLACK
     public static final String RED_BACKGROUND_BRIGHT = "\033[0;101m";// RED
     public static final String GREEN_BACKGROUND_BRIGHT = "\033[0;102m";// GREEN
@@ -80,3 +80,7 @@ public class TextColor {
     public static final String WHITE_BACKGROUND_BRIGHT = "\033[0;107m";   // WHITE
 
 }
+
+/*  개발자: Lulin Pollux */
+/*  MIT License
+	해당 소스코드 (.java)는 MIT License에 따라 이용할 수 있습니다. */

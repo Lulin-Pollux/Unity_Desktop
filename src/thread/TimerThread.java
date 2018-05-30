@@ -17,8 +17,12 @@ public class TimerThread extends Thread {
 			try {
 				sleep(1000);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 	}
 }
+
+/*  개발자: Lulin Pollux */
+/*  MIT License
+	해당 소스코드 (.java)는 MIT License에 따라 이용할 수 있습니다. */
