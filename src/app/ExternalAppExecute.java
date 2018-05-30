@@ -162,7 +162,7 @@ public class ExternalAppExecute extends JInternalFrame {
 				
 				//만약 CUI를 체크했으면 아래 문장을 추가하고 아니라면 추가안함.
 				if (rdbtnCui.isSelected() == true)
-					path = "cmd.exe /c start cmd /k call \"" + txtPath.getText() + "\"";
+					path = "cmd.exe /c start cmd /c call \"" + txtPath.getText() + "\"";
 				else
 					path = "\"" + txtPath.getText() + "\"";
 				

@@ -207,6 +207,7 @@ public class Shell {
 				
 			case "pwd":
 				System.out.println(System.getProperty("user.dir"));
+				System.out.println();
 				break;
 				
 			case "frontpage":
