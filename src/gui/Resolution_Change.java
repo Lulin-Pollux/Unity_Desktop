@@ -47,7 +47,7 @@ class Resolution_Change extends JDialog {
 		/* Dialog 세팅 */
 		//-----------------------------------------------------------
 		setTitle("해상도 변경");
-		setSize(243, 226);
+		setSize(230, 226);
 		setResizable(false);
 		setModal(true);
 		setLocationRelativeTo(null);
